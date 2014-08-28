@@ -1,0 +1,137 @@
+/*
+ CSS Reset
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Clock*/
+html, body{
+  background: #EEE;
+  overflow:hidden;
+  padding:10px;
+}
+
+#container {
+  background: #EEE;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+}
+
+time{
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	background: #fff;
+	border:1vh solid #333;
+	border-radius: 50%;
+	box-shadow:2px 2px 2px #ccc;
+}
+
+.tick-container { position:absolute; left:50%;z-index: 2; height:100%;}
+
+.tick {
+	position:absolute;
+	height:100%;
+	width :100%;
+	-webkit-transform-origin:center center;
+	-webkit-transform:rotate(30deg);
+}
+
+.tick:before, .tick:after { position:absolute; display:block; content:""; width:0.7vw; height:4%; background:#222; }
+.tick:after { bottom:0; }
+
+.tack-container { position:absolute; left:50%;z-index: 1; height:100%;}
+
+.tack {
+	position:absolute;
+	height:100%;
+	-webkit-transform-origin:center center;
+	-webkit-transform:rotate(6deg);
+}
+
+.tack:before, .tack:after { position:absolute; display:block; content:""; width:0.35vw; height:2%; background:#222; }
+.tack:after { bottom:0; }
+
+
+#hour {
+	position:absolute;
+	top:5%;
+	left:47%;
+    width:5%;
+    height:60%;
+    background:rgba(20,20,20,0.9);
+    -webkit-transform-origin: center 76%;
+}
+
+#minute {
+	position:absolute;
+	left:47%;
+	width:5%;
+	height:62.7%;
+	background:rgba(20,20,20,0.9);
+	-webkit-transform-origin: center 80%;
+}
+
+#second {
+	top:0.4%;
+	position:absolute;
+	z-index:99999;
+	left:48.9%;
+	width:1.5%;
+	height:62.4%;
+	background:rgb(255,70,70);
+	-webkit-transform-origin: center 80%;
+}
+
+#second:after {
+  position:absolute;
+  content:"";
+  background:rgb(255,70,70);
+  display:block;
+  width:2vw;
+  height:2vw;
+  left:-0.6vw;
+  border-radius:50%;
+}
